@@ -1,0 +1,16 @@
+{% extends 'graduates/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+    <h1>Пожелания выпускников</h1>
+    {% for el in tips %}
+        <div class="alert alert-warning mt-2">
+            <h3>{{ el.title }}</h3>
+            <p>{{ el.tip }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+
